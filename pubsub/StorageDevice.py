@@ -4,7 +4,7 @@ import random
 from datetime import datetime
 
 
-DelayInPackets = 30  # defines the delay among each packet while sending to cloud 
+DelayInPackets = 10 # defines the delay among each packet while sending to cloud 
 DeviceName = "BrevarageDevice001" # name of the simulated device device 
 
 
