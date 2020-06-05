@@ -2,6 +2,7 @@ import paho.mqtt.client as paho
 import time
 import random
 from datetime import datetime
+import json
 
 
 DelayInPackets = 10 # defines the delay among each packet while sending to cloud 
@@ -78,11 +79,12 @@ def storage_device_init():
 
     while True:
         
-        publishMessage = simulated_packet() # gets the simulated message 
-        print("The simulated message from storage device \n") 
-        print(publishMessage) # prints the message 
+        publishMessage = simulated_packet() # gets the simulated message
+        message = json.dumps(publishMessage) #covert the message to string before sending 
+        print("The simulated message from storage device \n")
+        print(message) # prints the message 
         print("\n")
-        (rc, mid) = client.publish("storageDevice/simulator", str(publishMessage), qos=1) # publish the message 
+        (rc, mid) = client.publish("storageDevice/simulator", message, qos=1) # publish the message 
         
         time.sleep(DelayInPackets) # wait before executing the loop again 
 
