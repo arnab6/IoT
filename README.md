@@ -24,10 +24,8 @@ The "subcriberTempatureCheck.py" suscribes to same topic that "StorageDevice.py"
 
 ```
 $ python subcriberTempatureCheck.py
-
 ```
 
-```
 
 The "suscriberHumidityCheck.py" suscribes to same topic that "StorageDevice.py" is publishing & checks for the humidity condtion.
 
