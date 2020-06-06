@@ -1,4 +1,4 @@
-# IoT publish / Suscriber roject using python
+# IoT publish / Suscriber project using python
 
 ### Installation
 
